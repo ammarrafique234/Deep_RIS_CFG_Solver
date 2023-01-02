@@ -20,6 +20,6 @@ DNN/lib/: dependecies
 
 ## 2.2 The big file
 
-DNN/lib/"metaatom_data_uv_s1.mat" it has unit-cell data
-"train_test_sets.mat" sample training and testing data :regenerate from code
+DNN/lib/"metaatom_data_uv_s1.mat" it has unit-cell data<br>
+"train_test_sets.mat" sample training and testing data :regenerate from code<br>
 "myCNN01.mat" it has DNN network :regenerate from code
