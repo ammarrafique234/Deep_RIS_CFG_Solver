@@ -6,16 +6,16 @@ Code to generate dataset and train Deep CNN for Reconfigurable Intelligent Surfa
 
 ## 1. Final Radiation patterns for results section
 
-FinalResults/Ref/
-FinalResults/GA/
+FinalResults/Ref/<br>
+FinalResults/GA/<br>
 FinalResults/DNN/
 
 ## 2.1 NN training code
 
-DNN/"deepNN_dataset_gen.m" dataset generation file
-DNN/"deepCNNCreateANDConnect.m" cnn architecture making file
-DNN/"deepRIS_train.m" training file
-DNN/"deepRIS_testOnly.m" testing file
+DNN/"deepNN_dataset_gen.m" dataset generation file<br>
+DNN/"deepCNNCreateANDConnect.m" cnn architecture making file<br>
+DNN/"deepRIS_train.m" training file<br>
+DNN/"deepRIS_testOnly.m" testing file<br>
 DNN/lib/: dependecies
 
 ## 2.2 The big file
