@@ -19,6 +19,6 @@ tmp_prime(tmp_prime>0)=1;
 tmp_prime(tmp_prime<0)=0;
 test_set_cfg_prime = tmp_prime; 
 %
-test_set_rp_prime=fitness_fcn_compact(test_set_cfg_prime,M,N);
-rmse(ii) = sqrt(mean(mean((test_set_rp(:,:,ii) - test_set_rp_prime).^2)));
+test_set_rp_prime=fitness_fcn_compact(test_set_cfg_prime,M,N);% the predicted output
+rmse(ii) = sqrt(mean(mean((test_set_rp(:,:,ii) - test_set_rp_prime).^2)));% prediction error
 end
