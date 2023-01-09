@@ -1,9 +1,9 @@
-n_train=100;
+n_train=100000;
 %load dataset
-load('train_test_sets.mat',...
+load('train_test_sets100000.mat',...
    'train_set_rp', 'train_set_cfg', 'test_set_rp', 'M', 'N');
 
-if(n_train~=size(train_set_rp,3))
+if(n_train>size(train_set_rp,3))
     % generate and store dataset
     deepNN_dataset_gen(n_train); % n_train=100,000 requires >25GB RAM
 end
@@ -19,7 +19,7 @@ layers = deepCNNConnect(net);
 % %     'MaxEpochs',2, ... % epoch set to 5 for quickly testing the code
 % %     'Verbose',false, ...
 % %     'Plots','training-progress');
-options.MiniBatchSize = 10;
+options.MiniBatchSize = 1000;
 options.MaxEpochs = 2;
 %% Resume NN training
 
@@ -33,9 +33,11 @@ for ii=1:n_train
 end
 end
 %dataset variable reshape end
-
+tic;
 net2 = trainNetwork(tx, ty, layers, options);
+toc;
 
+% comment below code to avoid saving if performance is not upto the mark
 save(...
-    'myCNN02.mat',... 
+    'myCNN03.mat',... 
     'net2', 'layers', 'options');

@@ -9,13 +9,13 @@ clc;
 %%
 tic
 %generate dataset
-n_train=100;
+n_train=1000;
 % generate and store dataset
 % deepNN_dataset_gen(n_train); % n_train=100,000 requires >25GB RAM
 disp('Dataset generation Time');
 toc;
 %load dataset
-load('train_test_sets.mat',...
+load('train_test_sets1000.mat',...
    'train_set_rp', 'train_set_cfg', 'test_set_rp', 'M', 'N');
 
 %% Load architecture 
